@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Show-past-years-only : Simple ExpressionEngine Plugin that will display a year only if it's not the current year." />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Show-past-years-only</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/johnfmorton/Show-Past-Years-Only">View on GitHub</a>
+
+          <h1 id="project_title">Show-past-years-only</h1>
+          <h2 id="project_tagline">Simple ExpressionEngine Plugin that will display a year only if it's not the current year.</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/johnfmorton/Show-Past-Years-Only/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/johnfmorton/Show-Past-Years-Only/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>Installation instructions</h1>
+
+<p>To install 'Show Past Years Only' place the 'showpastyearsonly' into your system/expressionengine/third_party folder.</p>
+
+<h1>Overview</h1>
+
+<p>What if you only wanted to show the year for entries from past years and leave more current entries with a cleaner date? This plug-in is here to help. </p>
+
+<p>Just pass in a year, presumably from the entry date of an entry, and this will return the year for display only if it does not match the current year. It can also prepend or append strings to the output to give you the proper formatting for your dates that do display the year.</p>
+
+<h1>Usage</h1>
+
+<p>It requires 1 parameter and had 2 optional parameters:</p>
+
+<p>'year' is required. This is typically the year of the entry you are displaying.</p>
+
+<p>'foreword' and 'afterword' are optional and are strings that will be added before or after the returned year, if a year is returned at all. </p>
+
+<p>NOTE: ExpressionEngine trims whitespace from parameter values, so in order to use spaces in 'foreword' and 'afterword' we need a special token. This token is the word "SPACE" and it will be replaced with an actual space character when returned.</p>
+
+<hr><p>For example let's assume you have an entry created on January 1, 2012. Within a channels entry loop returning that entry, you would do something like this:</p>
+
+<p>{entry_date format='%F %j'}{exp:showpastyearsonly year='{entry_date format='%Y'}' foreword=',SPACE'}</p>
+
+<p>During 2012, this would return:</p>
+
+<p>January 1</p>
+
+<p>As soon as 2012 is over, it will return:</p>
+
+<p>January 1, 2012</p>
+
+<h2></h2>
+
+<p>If you have any questions, please drop me a line at <a href="mailto:john@johnfmorton.com">john@johnfmorton.com</a>.</p>
+
+<p>If you like this add-on, you may also like my commerical add-on,  Pic Puller: the Instagram Add-on for ExpressionEngine at <a href="http://devot-ee.com/add-ons/pic-puller-for-instagram">http://devot-ee.com/add-ons/pic-puller-for-instagram</a>.</p>
+
+<p>Thanks.</p>
+
+<p>-John</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Show-past-years-only maintained by <a href="https://github.com/johnfmorton">johnfmorton</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
